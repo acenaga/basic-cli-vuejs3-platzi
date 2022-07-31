@@ -21,10 +21,12 @@ export default {
   data() {
     return {
       text: "Hello World",
+      show: false,
     };
   },
   methods: {
     toggle() {
+      console.log("haciendo toggle");
       this.show = !this.show;
     },
   },

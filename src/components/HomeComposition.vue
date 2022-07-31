@@ -18,9 +18,12 @@ export default {
     }, 500);
 
     watch(
+      // hay que bindear el this de la funcion
       () => obj.counter2,
       (valor, anterior) => {
-        console.log("watch", valor, anterior);
+        valor;
+        anterior;
+        // console.log("watch", valor, anterior);
       }
     );
 
