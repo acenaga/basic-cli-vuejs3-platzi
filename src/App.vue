@@ -13,7 +13,7 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <component :is="componente"> </component>
   <user-repositories :user="'Carlos'"></user-repositories>
-  <home-composition></home-composition>
+  <home-composition year-birth="1980" month-birth="Marzo"></home-composition>
 </template>
 
 <script>
