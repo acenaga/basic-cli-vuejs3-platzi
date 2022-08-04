@@ -13,7 +13,11 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <component :is="componente"> </component>
   <user-repositories :user="'Carlos'"></user-repositories>
-  <home-composition year-birth="1980" month-birth="Marzo"></home-composition>
+  <home-composition
+    year-birth="1980"
+    month-birth="Marzo"
+    some="thing"
+  ></home-composition>
 </template>
 
 <script>
@@ -23,6 +27,7 @@
 import base from "@/mixins/base";
 import MenuHeader from "./components/MenuHeader.vue";
 import ModalVue from "./components/ModalVue.vue";
+import { provide } from "vue";
 import UserRepositories from "./components/UserRepositories.vue";
 // composition API
 import HomeComposition from "@/components/HomeComposition.vue";
@@ -41,6 +46,9 @@ export default {
     ModalVue,
     UserRepositories,
     HomeComposition,
+  },
+  setup() {
+    provide("username", "acenaga");
   },
   data() {
     return {
